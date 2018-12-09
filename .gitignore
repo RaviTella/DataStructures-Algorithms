@@ -1,23 +1,58 @@
-# Windows thumbnail cache files
-Thumbs.db
-ehthumbs.db
-ehthumbs_vista.db
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
-# Folder config file
-Desktop.ini
+# personal
+rt-notes.txt
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# External tool builders
+.externalToolBuilders/
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Locally stored "Eclipse launch configurations"
+*.launch
 
-# Windows shortcuts
-*.lnk
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
 
-# =========================
-# Operating System Files
-# =========================
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
