@@ -10,9 +10,9 @@ public class BinarySearchTreeByRefTest {
 
 	@Before
 	public void setUp() throws Exception {
-		b=new BinarySearchTreeByRef();
+		b = new BinarySearchTreeByRef();
 		b.insert(10, "Ten");
-		b.insert(20, "Twenty");		
+		b.insert(20, "Twenty");
 		b.insert(9, "Nine");
 		b.insert(15, "Fifteen");
 		b.insert(70, "Seventy");
@@ -20,8 +20,8 @@ public class BinarySearchTreeByRefTest {
 		b.insert(1, "One");
 		b.insert(2, "Two");
 		b.insert(30, "Thirty");
-		
-		b1= new BinarySearchTreeByRef();
+
+		b1 = new BinarySearchTreeByRef();
 		b1.insert(50, "fifty");
 		b1.insert(20, "twenty");
 		b1.insert(60, "sixty");
@@ -29,33 +29,31 @@ public class BinarySearchTreeByRefTest {
 		b1.insert(55, "fiftyfive");
 		b1.insert(30, "thirty");
 		b1.insert(70, "seventy");
-		
-		
-		
+
 	}
 
 	@Test
 	public void nodeForGiveKeyShouldBeFound() {
-		assertTrue((b.find(2).value).equals("Two"));			
+		assertTrue((b.find(2).value).equals("Two"));
 	}
-	
+
 	@Test
 	public void nodeForGiveKeyShouldNotBeFound() {
-		assertNull(b.find(100));				
+		assertNull(b.find(100));
 	}
-	
+
 	@Test
-	public void nodeWithMaxKeyShouldBeReturned(){
+	public void nodeWithMaxKeyShouldBeReturned() {
 		assertTrue((b.maximum().value).equals("Seventy"));
 	}
-	
+
 	@Test
-	public void nodeWithMinKeyShouldBeReturned(){
+	public void nodeWithMinKeyShouldBeReturned() {
 		assertTrue((b.minimum().value).equals("One"));
 	}
-	
+
 	@Test
-	public void inOrderTraversalTest(){
+	public void inOrderTraversalTest() {
 		b.inOrderTraversal("dscend");
 	}
 
