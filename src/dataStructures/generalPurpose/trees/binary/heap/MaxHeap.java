@@ -22,10 +22,11 @@ public class MaxHeap {
 	}
 
 	public Node remove() {
-		Node rNode = a[0]; // saving the root node that will be removed
-		a[0] = a[--nElements]; // moves the last node to the root node position
-								// and decrements the
-								// number of elements in the array
+		// saving the root node that will be removed
+		Node rNode = a[0];
+		// moves the last node to the root node position and decrements the
+		// number of elements in the array
+		a[0] = a[--nElements];
 		trickleDown(0);
 		return rNode; // return the saved root node
 	}
@@ -71,32 +72,27 @@ public class MaxHeap {
 	}
 
 	private void trickleDown(int cIndex) {
-		while (cIndex < nElements / 2) { // While loop continues till the
-											// current node has at least one
-											// child
+		// While loop continues till the current node has at least one child
+		while (cIndex < nElements / 2) {
 			int rightCIndex = rightChildIndex(cIndex);
 			int leftCIndex = leftChildIndex(cIndex);
-			int largeCIndex = leftCIndex; // Setting large child index to Left
-											// child
-			// "rightCIndex < nElements" checks if the last child has right node
+			int largeCIndex = leftCIndex;
 			if (rightCIndex < nElements && a[rightCIndex].key > a[leftCIndex].key) {
-				largeCIndex = rightCIndex; // Large child index set to right
-											// child only if right child
-											// exists and is grater than left
-											// child
+				// Large child index set to right child only if right child
+				// exists and is grater than left child
+				largeCIndex = rightCIndex;
 			}
-			if (a[cIndex].key >= a[largeCIndex].key) { // return if node is
-														// grater than or equal
-														// to large
-														// child
+			// return if node is grater than or equal to large child
+			if (a[cIndex].key >= a[largeCIndex].key) {
 				return;
-			} else { // if node is less than large node then swap. Swap is
-						// always done with the largest.
+				// if node is less than large node then swap. Swap is always
+				// done with the largest.
+			} else {
 				Node temp = a[largeCIndex];
 				a[largeCIndex] = a[cIndex];
 				a[cIndex] = temp;
-				cIndex = largeCIndex; // set the loop control variable to large
-										// index
+				// set the loop control variable to large index
+				cIndex = largeCIndex;
 			}
 		}
 	}

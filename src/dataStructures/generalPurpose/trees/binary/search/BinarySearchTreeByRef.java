@@ -19,20 +19,20 @@ public class BinarySearchTreeByRef {
 		} else {
 			Node cNode = root;
 			while (true) {
-				Node pNode = cNode; // saving the current node reference to
-									// pNode
+				// saving the current node reference to pNode
+				Node pNode = cNode;
 				if (nNode.key < cNode.key) {
 					cNode = cNode.leftChild;
 					if (cNode == null) { // reached vacant spot
-						pNode.leftChild = nNode; // setting the new node as
-													// pNode left Child
+						// setting the new node as pNode left Child
+						pNode.leftChild = nNode;
 						return;
 					}
 				} else {
 					cNode = cNode.rightChild;
 					if (cNode == null) { // reached vacant spot
-						pNode.rightChild = nNode; // setting the new node as
-													// pNode right Child
+						// setting the new node as pNode right Child
+						pNode.rightChild = nNode;
 						return;
 					}
 				}
@@ -63,8 +63,8 @@ public class BinarySearchTreeByRef {
 			return null;
 		} else {
 			cNode = root;
-			while (cNode.leftChild != null) { // keep going left till the left
-												// child of a node is NULL
+			// keep going left till the left child of a node is NULL
+			while (cNode.leftChild != null) {
 				cNode = cNode.leftChild;
 			}
 		}
@@ -77,8 +77,8 @@ public class BinarySearchTreeByRef {
 			return null;
 		} else {
 			cNode = root;
-			while (cNode.rightChild != null) { // Keep going right till right
-												// child of node is null
+			// Keep going right till right child of node is null
+			while (cNode.rightChild != null) {
 				cNode = cNode.rightChild;
 			}
 		}
