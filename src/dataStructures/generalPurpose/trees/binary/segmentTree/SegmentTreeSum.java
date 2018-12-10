@@ -12,7 +12,9 @@ public class SegmentTreeSum {
   SegmentTreeSum(int[] iArray) {
     this.iArray = iArray;
     this.stArray = new int[3 * iArray.length];
+    if(iArray.length>0){
     recursiveBuild(0, iArray.length - 1, 0);
+    }
   }
 
   /**
