@@ -1,4 +1,4 @@
-package dataStructures.generalPurpose.trees.binary.search;
+ package dataStructures.generalPurpose.trees.binary.search;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -54,7 +54,21 @@ public class BinarySearchTreeByRefTest {
 
 	@Test
 	public void inOrderTraversalTest() {
-		b.inOrderTraversal("dscend");
+		System.out.println("In Order Ascend");
+		b.inOrderTraversal("ascend");
 	}
+	
+	@Test
+	public void preOrderTraversal(){
+		System.out.println("Pre Order");
+		b1.preOrderTraversal();
+	}
+	
+	@Test
+	public void postOrderTraversal(){
+		System.out.println("Post Order");
+		b1.postOrderTraversal();
+	}
+	
 
 }

@@ -41,19 +41,23 @@ public class SegmentTreeSum {
    * @return
    */
   private int recursiveSum(int sS, int sE, int iS, int iE, int sNode) {
-    // if sub array is out of current range
-    if (iE < sS || iS > sE || sS > sE) {
+	 //BASE CASE 1
+    // if segment is out side the query range 
+    if (sS > iE || sE <iS) {
       return 0;
     }
-    // if the sub array is same or overlaps the current range (current range is same or within the
-    // sub array)
+    //if segment is the same as the query range or segment is within the query range
+    //BASE CASE 2
     if (iS >= sS && iE <= sE) {
       return stArray[sNode];
     }
+    //segment intersects the query range 
+    //DIVIDE
     // current range and query range intersect
     int mIndex = (iS + iE) / 2;
     int leftChildIndex = leftChildIndex(sNode);
     int rightChildIndex = rightChildIndex(sNode);
+    //ACTION
     // left
     return recursiveSum(sS, sE, iS, mIndex, leftChildIndex) +
     // right
@@ -63,10 +67,12 @@ public class SegmentTreeSum {
   }
 
   private void recursiveBuild(int iS, int iE, int sNode) {
+	  //BASE CASE
     if (iS == iE) {
       stArray[sNode] = iArray[iS];
       return;
     }
+    //DIVIDE
     int mIndex = (iS + iE) / 2;
     int leftChildIndex = leftChildIndex(sNode);
     int rightChildIndex = rightChildIndex(sNode);
@@ -74,6 +80,7 @@ public class SegmentTreeSum {
     recursiveBuild(iS, mIndex, leftChildIndex);
     // right
     recursiveBuild(mIndex + 1, iE, rightChildIndex);
+    //ACTION
     // sum up children for parent
     stArray[sNode] = stArray[leftChildIndex] + stArray[rightChildIndex];
   }

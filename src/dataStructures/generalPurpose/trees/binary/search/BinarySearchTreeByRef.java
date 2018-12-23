@@ -92,7 +92,7 @@ public class BinarySearchTreeByRef {
 			recursiveInOrderDscendTraversal(root);
 		}
 	}
-
+    //IN-ORDER
 	private void recursiveInOrderAscendTraversal(Node cNode) {
 		if (cNode != null) {
 			recursiveInOrderAscendTraversal(cNode.leftChild);
@@ -108,7 +108,41 @@ public class BinarySearchTreeByRef {
 			recursiveInOrderDscendTraversal(cNode.leftChild);
 		}
 	}
-
+	
+	public void preOrderTraversal(){
+		recursivePreOrderTraversal(root);
+	}
+	
+	//PRE-ORDER
+	private void recursivePreOrderTraversal(Node cNode){
+		//BASE CASE
+		if(cNode==null){
+			return;
+		}
+		//Action
+		System.out.println(cNode.key);
+		//Divide
+		recursivePreOrderTraversal(cNode.leftChild);
+		recursivePreOrderTraversal(cNode.rightChild);
+	}
+	public void postOrderTraversal(){
+		recursivePostOrderTraversal(root);
+	}
+	
+	private void recursivePostOrderTraversal(Node cNode){
+		//BASE CASE
+		if(cNode==null){
+			return;
+		}
+		//DIVIDE
+		recursivePostOrderTraversal(cNode.leftChild);
+		recursivePostOrderTraversal(cNode.rightChild);
+		//ACTION
+		System.out.println(cNode.key);
+		
+		
+	}
+   
 	public void displayTree() {
 
 	}
