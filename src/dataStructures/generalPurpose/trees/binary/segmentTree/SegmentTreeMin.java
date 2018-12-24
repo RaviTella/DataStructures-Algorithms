@@ -84,6 +84,7 @@ public class SegmentTreeMin {
 		int sARCI = getRightChildIndex(sANode);		
 		recursiveUpdate(qI, val, sALCI, iAS, mid);
 		recursiveUpdate(qI, val, sARCI, mid+1, iAE);
+		//Action
 		sA[sANode]=getMin(sA[sALCI],sA[sARCI]);
 		
 		
