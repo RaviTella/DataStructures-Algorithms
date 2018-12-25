@@ -1,5 +1,6 @@
 .metadata
 bin/
+out/
 tmp/
 *.tmp
 *.bak
@@ -9,6 +10,9 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+.idea
+*.iml
+
 
 # personal
 rt-notes.txt
