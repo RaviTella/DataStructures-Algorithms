@@ -35,12 +35,12 @@ public class Fibonacci {
     return sum;
   }
 
-  public int generateDynamicProgrammingWrapper(int n) {
+  public int generateMemoization(int n) {
     int[] cache = new int[n + 1];
-    return generateDynamicProgramming(n, cache);
+    return generateMemoization(n, cache);
   }
 
-  public int generateDynamicProgramming(int n, int[] cache) {
+  public int generateMemoization(int n, int[] cache) {
   	//return sum from the cache
   	if(cache[n]!=0){
   		return cache[n];
@@ -52,7 +52,7 @@ public class Fibonacci {
     if (n == 1) {
       return 1;
     }
-    int sum = generateDynamicProgramming(n - 1,cache) + generateDynamicProgramming(n - 2,cache);
+    int sum = generateMemoization(n - 1,cache) + generateMemoization(n - 2,cache);
     //cache sum
     cache[n]=sum;
     return sum;
