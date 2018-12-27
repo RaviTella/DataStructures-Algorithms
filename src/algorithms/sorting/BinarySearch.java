@@ -1,6 +1,6 @@
 package algorithms.sorting;
 
-import static org.hamcrest.CoreMatchers.startsWith;
+
 
 public class BinarySearch {
 	private int[] a;
@@ -9,39 +9,23 @@ public class BinarySearch {
 		this.a = a;
 	}
 
-	public long binarySearch(long key) {
-		if (key == 4) {
-			return key;
-		}
-		return getLong();
-
-	}
-
-	private long getLong() {
-		return getAnotherLong();
-	}
-
-	private long getAnotherLong() {
-		return 266;
-	}
-
 	public static void main(String[] args) {
-		// int[] a = { 3, 7, 9, 12, 17, 20,70 };
-		int[] a = { 2, 5 };
+		 int[] a = { 3, 7, 9, 12, 17, 20,70 };
+		//int[] a = { 2, 5 };
 
 		// System.out.println(new BinarySearch(new long[1]).binarySearch(1));
-		System.out.println(new BinarySearch(a).search(5));
+		System.out.println(new BinarySearch(a).search(20));
 
 	}
-
+    //Retruns the index of the search key
 	public int search(int key) {
 		return recursiveBinarySearch(key, 0, a.length - 1);
 	}
 
 	private int recursiveBinarySearch(int key, int sIndex, int eIndex) {
-        //Divide 
+		// Divide
 		int mIndex = (sIndex + eIndex) / 2;
-		    //Action
+		// Action
 		if (key == a[mIndex]) {
 			return mIndex;
 			// Base Case
