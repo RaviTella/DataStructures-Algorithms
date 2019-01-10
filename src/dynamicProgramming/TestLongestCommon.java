@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class TestLongestCommonSubstring {
+public class TestLongestCommon {
 
 	@Test
 	public void testSubStringIterativeDP() {
