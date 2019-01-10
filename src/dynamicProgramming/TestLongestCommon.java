@@ -13,7 +13,6 @@ public class TestLongestCommon {
 		assertEquals(1, LongestCommon.subStringIterativeDP("abcplka", "axyz"));
 		assertEquals(6, LongestCommon.subStringIterativeDP("ababcplka", "axyzababkpababcp"));
 
-
 	}
 	
 	@Test
