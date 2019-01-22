@@ -60,7 +60,6 @@ public class SinglyLinkedList<T> {
 			currentLink.nextLink = new SingleLink<T>(val, prevNext);
 			nElements++;
 		}
-
 	}
 
 	public T get(int index) {
@@ -112,6 +111,5 @@ public class SinglyLinkedList<T> {
 			nElements--;
 			return;
 		}
-
 	}
 }
