@@ -1,10 +1,10 @@
 package dataStructures.generalPurpose.list;
 
-public class SingleLink {
-	int val;
-	SingleLink nextLink;
+public class SingleLink<T> {
+	T val;
+	SingleLink<T> nextLink;
 
-	SingleLink(int val, SingleLink nextLink) {
+	SingleLink(T val, SingleLink<T> nextLink) {
 		this.val = val;
 		this.nextLink = nextLink;
 	}
