@@ -5,12 +5,14 @@ public class Graph {
 	private int numVertices;
 	private int[][] adjMatrix;
 	private Stack pathStack;
+	private Queue pathQueue;
 
 	public Graph(int maxVertices) {
 		this.vArray = new Vertex[maxVertices];
 		this.numVertices = 0;
 		this.adjMatrix = new int[maxVertices][maxVertices];
 		this.pathStack = new Stack(maxVertices);
+		this.pathQueue= new Queue(maxVertices);
 	}
 
 	public void addVertex(Vertex v) {
@@ -45,6 +47,24 @@ public class Graph {
 				pathStack.push(vIndex);
 			} else {
 				pathStack.pop();
+			}
+		}
+		
+	}
+	
+	public void breadthFirstSearch() {
+		Vertex first = vArray[0];
+		printVertex(0);
+		pathQueue.enQueue(0);
+		first.isVisited=true;
+		while(!pathQueue.isEmpty()) {
+			int vIndex = getAdjUnVistitedVertexIndex(pathQueue.peek());
+			if(vIndex!=-1) {
+				printVertex(vIndex);
+				vArray[vIndex].isVisited=true;
+				pathQueue.enQueue(vIndex);
+			} else {
+				pathQueue.deQueue();
 			}
 		}
 		
