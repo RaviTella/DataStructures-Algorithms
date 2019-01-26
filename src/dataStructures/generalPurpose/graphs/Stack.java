@@ -25,7 +25,7 @@ public class Stack {
 		}
 	}
 
-	int peek() {
+	int peekTail() {
 		if (tailIndex < 0) {
 			throw new IndexOutOfBoundsException(tailIndex);
 		} else {
